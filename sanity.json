@@ -1,7 +1,7 @@
 {
   "root": true,
   "project": {
-    "name": "PHX Home Loan 2"
+    "name": "VA Loans for Vets 2"
   },
   "api": {
     "projectId": "s9pxp9z8",
@@ -14,11 +14,14 @@
     "@sanity/default-login",
     "@sanity/desk-tool",
     "@sanity/dashboard",
-    "table"
+    "table",
+    "dashboard-widget-netlify"
   ],
   "env": {
     "development": {
-      "plugins": ["@sanity/vision"]
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [
