@@ -12,10 +12,10 @@ export default {
                 "NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.",
               sites: [
                 {
-                  buildHookId: "60d9de3e7985049c8ac39908",
-                  title: "VaLoansForVets.com Development Copy",
+                  buildHookId: "5d564ded6c60475c5ab48f19",
+                  title: "VaLoansForVets.com",
                   name: "valoansforvets2",
-                  apiId: "ca80c852-f673-413d-8a7d-3004d366fc61",
+                  apiId: "6d1af887-72d0-488d-b257-57b3ee8fcd3d",
                 },
               ],
             },
