@@ -24,6 +24,16 @@ export default {
       fieldset: 'seo'
     },
     {
+      name: 'seoNoIndex',
+      title: 'NoIndex & Hide from Sitemap',
+      type: 'boolean',
+      fieldset: 'seo',
+      options: {
+        layout: 'checkbox',
+      },
+      initialValue: 'false',
+    },
+    {
       name: 'title',
       type: 'string',
       title: 'Title',
