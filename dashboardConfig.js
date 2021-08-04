@@ -24,7 +24,7 @@ export default {
         data: [
           {
             title: "Frontend",
-            value: "https://valoansforvets2.netlify.com",
+            value: "https://www.valoansforvets.com",
             category: "apps",
           },
         ],
