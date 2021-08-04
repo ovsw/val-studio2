@@ -1,3 +1,8 @@
+import { FaLink, FaExternalLinkAlt } from "react-icons/fa";
+
+const internalLinkRender = (props) => <a>{props.children}</a>;
+
+
 export default {
   name: 'bodyPortableText',
   type: 'array',
@@ -27,9 +32,31 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
+            name: "internalLink",
+            type: "object",
+            title: "Internal Link",
+            blockEditor: {
+              icon: FaLink,
+              render: internalLinkRender,
+            },
+            fields: [
+              {
+                name: "reference",
+                type: "reference",
+                title: "Reference",
+                to: [
+                  { type: "page" },
+                  { type: "post" },
+                  // other types you may want to link to
+                ],
+              },
+            ],
+          },
+          {
             name: 'link',
             type: 'object',
-            title: 'URL',
+            title: 'External Link',
+            icon: FaExternalLinkAlt,
             fields: [
               {
                 title: 'URL',
