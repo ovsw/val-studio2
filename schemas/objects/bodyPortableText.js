@@ -1,3 +1,4 @@
+import React from "react";
 import { FaLink, FaExternalLinkAlt } from "react-icons/fa";
 
 const internalLinkRender = (props) => <a>{props.children}</a>;
@@ -49,6 +50,7 @@ export default {
                   { type: "post" },
                   // other types you may want to link to
                 ],
+                validation: Rule => Rule.required().error("internal link is missing a destination.")
               },
             ],
           },

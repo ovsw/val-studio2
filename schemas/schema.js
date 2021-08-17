@@ -8,18 +8,20 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import author from './documents/author'
 import category from './documents/category'
 import post from './documents/post'
-import siteSettings from './documents/siteSettings'
 import page from './documents/page'
+import redirects from './documents/redirects'
+import siteSettings from './documents/siteSettings'
 
 // Object types
-import bodyPortableText from './objects/bodyPortableText'
-import bioPortableText from './objects/bioPortableText'
-import excerptPortableText from './objects/excerptPortableText'
-import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
-import youtube from './objects/youtube'
+import bioPortableText from './objects/bioPortableText'
+import bodyPortableText from './objects/bodyPortableText'
+import excerptPortableText from './objects/excerptPortableText'
 import iframeEmbed from './objects/iframeEmbed'
+import mainImage from './objects/mainImage'
 import mytable from './objects/mytable'
+import redirect from './objects/redirect'
+import youtube from './objects/youtube'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,19 +32,23 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    siteSettings,
-    post,
-    page,
-    category,
+    // documents
     author,
-    mainImage,
+    category,
+    page,
+    post,
+    redirects,
+    siteSettings,
+    // objects
     authorReference,
-    bodyPortableText,
     bioPortableText,
+    bodyPortableText,
     excerptPortableText,
-    youtube,
     iframeEmbed,
-    mytable
+    mainImage,
+    mytable,
+    redirect,
+    youtube,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
