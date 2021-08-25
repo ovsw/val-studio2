@@ -8470,6 +8470,14 @@ sanity-diff-patch@^1.0.9:
   dependencies:
     diff-match-patch "^1.0.5"
 
+sanity-plugin-dashboard-widget-gatsby@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/sanity-plugin-dashboard-widget-gatsby/-/sanity-plugin-dashboard-widget-gatsby-1.0.9.tgz#2f7e2fcbb0e9465cd44a0cca06c4d30824b55546"
+  integrity sha512-TzuR/YL75uDccU62dj6KasrICQQU5vrlqU3TcX2lta52WFbQXYdoPcOR93LtYiGlwWx2ddfjg9khr9qBBL2cmw==
+  dependencies:
+    abort-controller "^2.0.3"
+    react-props-stream "^1.0.0"
+
 sanity-plugin-dashboard-widget-netlify@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/sanity-plugin-dashboard-widget-netlify/-/sanity-plugin-dashboard-widget-netlify-1.1.0.tgz#cc8218e5345eff08d7336d0612824336feb1c816"

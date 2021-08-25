@@ -29,6 +29,7 @@
     "react-dom": "^17.0",
     "react-icons": "^4.2.0",
     "react-youtube": "^7.13.1",
+    "sanity-plugin-dashboard-widget-gatsby": "^1.0.9",
     "sanity-plugin-dashboard-widget-netlify": "^1.1.0",
     "sanity-plugin-table": "^2.2.0"
   },

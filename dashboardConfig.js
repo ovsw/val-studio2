@@ -2,6 +2,10 @@ export default {
   widgets: [
     // { name: "structure-menu" },
     {
+      name: "gatsby",
+      options: { sites: [{ siteUrl: "https://google.com/" }] },
+    },
+    {
       name: "project-info",
       options: {
         __experimental_before: [
@@ -31,6 +35,13 @@ export default {
       },
     },
     { name: "project-users", layout: { height: "auto" } },
+    {
+      name: "gatsby-cloud-start-preview",
+      options: {
+        sites: [{ siteUrl: "https://preview-valoansforvets.gtsb.io/" }],
+      },
+      layout: "wide",
+    },
     // {
     //   name: "document-list",
     //   options: {
