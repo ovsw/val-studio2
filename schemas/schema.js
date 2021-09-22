@@ -21,6 +21,7 @@ import iframeEmbed from './objects/iframeEmbed'
 import mainImage from './objects/mainImage'
 import mytable from './objects/mytable'
 import redirect from './objects/redirect'
+import simpleImage from './objects/simpleImage'
 import youtube from './objects/youtube'
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -48,6 +49,7 @@ export default createSchema({
     mainImage,
     mytable,
     redirect,
+    simpleImage,
     youtube,
 
     // When added to this list, object types can be used as

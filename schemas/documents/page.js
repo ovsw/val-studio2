@@ -63,7 +63,13 @@ export default {
       name: 'body',
       title: 'Body',
       type: 'bodyPortableText'
-    }
+    },
+    {
+      name: 'image',
+      title: 'Custom Header Image',
+      type: 'simpleImage',
+      description: 'This is an optional image which, if added, will be displayed in the header of the page on the website, instead of the default one.'
+    },
   ],
   orderings: [
     {
