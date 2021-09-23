@@ -16,7 +16,7 @@ export default {
                 "NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.",
               sites: [
                 {
-                  buildHookId: "5d564ded6c60475c5ab48f19",
+                  buildHookId: "614c15bdaf661152f67d2dfe",
                   title: "VaLoansForVets.com",
                   name: "valoansforvets2",
                   apiId: "6d1af887-72d0-488d-b257-57b3ee8fcd3d",
