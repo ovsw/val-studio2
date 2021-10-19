@@ -10,6 +10,7 @@ import {
   MdEdit,
   MdVisibility,
 } from "react-icons/md";
+import { FaBook } from "react-icons/fa";
 
 const hiddenDocTypes = (listItem) =>
   !["category", "author", "post", "siteSettings"].includes(listItem.getId());
@@ -189,6 +190,34 @@ export default () =>
         .id("redirects")
         .icon(MdArrowForward)
         .schemaType("redirects"),
+      S.divider(),
+      S.listItem()
+        .title("Resource Video Pages")
+        .schemaType("vrVideo")
+        .child(
+          S.documentList()
+            .title("Resource Video Pages")
+            .filter('_type == "vrVideo"')
+        ),
+      S.listItem()
+        .title("Glossary Resources")
+        .icon(FaBook)
+        .child(
+          S.editor()
+            .id("glossarySection")
+            .schemaType("vrSection")
+            .documentId("vrSectionGlossary")
+        ),
+      S.listItem()
+        .title("Journey Resources")
+        .icon(FaBook)
+        .child(
+          S.editor()
+            .id("journeySection")
+            .schemaType("vrSection")
+            .documentId("vrSectionJourney")
+        ),
+
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above

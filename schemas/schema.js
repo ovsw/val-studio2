@@ -1,33 +1,36 @@
 // First, we must import the schema creator
-import createSchema from 'part:@sanity/base/schema-creator'
+import createSchema from "part:@sanity/base/schema-creator";
 
 // Then import schema types from any plugins that might expose them
-import schemaTypes from 'all:part:@sanity/base/schema-type'
+import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // document schemas
-import author from './documents/author'
-import category from './documents/category'
-import post from './documents/post'
-import page from './documents/page'
-import redirects from './documents/redirects'
-import siteSettings from './documents/siteSettings'
+import author from "./documents/author";
+import category from "./documents/category";
+import post from "./documents/post";
+import page from "./documents/page";
+import redirects from "./documents/redirects";
+import siteSettings from "./documents/siteSettings";
+import vrSection from "./documents/vrSection";
+import vrVideo from "./documents/vrVideo";
 
 // Object types
-import authorReference from './objects/authorReference'
-import bioPortableText from './objects/bioPortableText'
-import bodyPortableText from './objects/bodyPortableText'
-import excerptPortableText from './objects/excerptPortableText'
-import iframeEmbed from './objects/iframeEmbed'
-import mainImage from './objects/mainImage'
-import mytable from './objects/mytable'
-import redirect from './objects/redirect'
-import simpleImage from './objects/simpleImage'
-import youtube from './objects/youtube'
+import authorReference from "./objects/authorReference";
+import bioPortableText from "./objects/bioPortableText";
+import bodyPortableText from "./objects/bodyPortableText";
+import excerptPortableText from "./objects/excerptPortableText";
+import iframeEmbed from "./objects/iframeEmbed";
+import mainImage from "./objects/mainImage";
+import mytable from "./objects/mytable";
+import redirect from "./objects/redirect";
+import simpleImage from "./objects/simpleImage";
+import vrSubsection from "./objects/vrSubsection";
+import youtube from "./objects/youtube";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
-  name: 'blog',
+  name: "blog",
   // Then proceed to concatenate our our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
@@ -40,6 +43,7 @@ export default createSchema({
     post,
     redirects,
     siteSettings,
+    vrSection,
     // objects
     authorReference,
     bioPortableText,
@@ -50,9 +54,11 @@ export default createSchema({
     mytable,
     redirect,
     simpleImage,
+    vrSubsection,
+    vrVideo,
     youtube,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
-  ])
-})
+  ]),
+});
