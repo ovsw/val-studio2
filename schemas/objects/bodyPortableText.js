@@ -3,6 +3,21 @@ import { FaLink, FaExternalLinkAlt } from "react-icons/fa";
 
 const internalLinkRender = (props) => <a>{props.children}</a>;
 
+const buttonRender = (props) => (
+  <button
+    style={{
+      backgroundColor: "lightgray",
+      display: "inline-block",
+      padding: "1rem",
+      border: "none",
+      borderRadius: "5px",
+      cursor: "pointer",
+    }}
+  >
+    {props.children}
+  </button>
+);
+
 
 export default {
   name: 'bodyPortableText',
@@ -68,7 +83,33 @@ export default {
                   Rule.required().uri({scheme: ['http', 'https', 'mailto', 'tel'], allowRelative: true})
               }
             ]
-          }
+          },
+          {
+            name: "button",
+            type: "object",
+            title: "Button",
+            blockEditor: {
+              icon: () => "Btn",
+              render: buttonRender,
+            },
+            fields: [
+              {
+                title: "URL",
+                name: "href",
+                type: "url",
+                validation: (Rule) =>
+                  Rule.required().uri({
+                    scheme: ["http", "https", "mailto", "tel"],
+                    allowRelative: true,
+                  }),
+              },
+              {
+                title: "Open in new window",
+                name: "blank",
+                type: "boolean",
+              },
+            ],
+          },
         ]
       }
     },
