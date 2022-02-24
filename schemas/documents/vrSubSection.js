@@ -1,13 +1,19 @@
+import { FaBookmark, FaVideo } from "react-icons/fa";
+
 // import {format} from 'date-fns'
-import { FaBook } from "react-icons/fa";
 
 export default {
-  name: "vrSection",
-  title: "Video Resource Section",
+  name: "vrSubSection",
+  title: "Sub-Section",
   type: "document",
-  icon: FaBook,
+  icon: FaBookmark,
   liveEdit: false,
-  __experimental_actions: ["update", "publish"] /* 'create', 'delete' */,
+  __experimental_actions: [
+    "create",
+    "update",
+    "publish",
+    "delete",
+  ] /* 'create', 'delete' */,
   fieldsets: [
     {
       title: "SEO Info",
@@ -57,16 +63,18 @@ export default {
       },
     },
     {
-      name: "subSections",
+      name: "videoRefs",
+      title: "Video Resources",
+      icon: FaVideo,
       type: "array",
-      title: "Sub-Sections",
       of: [
         {
           type: "reference",
-          title: "Sub-Section Reference",
-          to: [{ type: "vrSubSection" }],
+          title: "Video Resource Reference",
+          to: [{ type: "vrVideo" }],
         },
       ],
+      validation: (Rule) => Rule.required(),
     },
     // {
     //   name: 'body',

@@ -192,6 +192,22 @@ export default () =>
         .schemaType("redirects"),
       S.divider(),
       S.listItem()
+        .title("Main Resource Section Pages")
+        .schemaType("vrSection")
+        .child(
+          S.documentList()
+            .title("Resource Video Pages")
+            .filter('_type == "vrSection"')
+        ),
+      S.listItem()
+        .title("Sub-Section Pages")
+        .schemaType("vrSubSection")
+        .child(
+          S.documentList()
+            .title("Resource Video Pages")
+            .filter('_type == "vrSubSection"')
+        ),
+      S.listItem()
         .title("Resource Video Pages")
         .schemaType("vrVideo")
         .child(
@@ -199,24 +215,24 @@ export default () =>
             .title("Resource Video Pages")
             .filter('_type == "vrVideo"')
         ),
-      S.listItem()
-        .title("Glossary Resources")
-        .icon(FaBook)
-        .child(
-          S.editor()
-            .id("glossarySection")
-            .schemaType("vrSection")
-            .documentId("vrSectionGlossary")
-        ),
-      S.listItem()
-        .title("Journey Resources")
-        .icon(FaBook)
-        .child(
-          S.editor()
-            .id("journeySection")
-            .schemaType("vrSection")
-            .documentId("vrSectionJourney")
-        ),
+      // S.listItem()
+      //   .title("Glossary Section")
+      //   .icon(FaBook)
+      //   .child(
+      //     S.editor()
+      //       .id("glossarySection")
+      //       .schemaType("vrSection")
+      //       .documentId("vrSectionGlossary")
+      //   ),
+      // S.listItem()
+      //   .title("Journey Section")
+      //   .icon(FaBook)
+      //   .child(
+      //     S.editor()
+      //       .id("journeySection")
+      //       .schemaType("vrSection")
+      //       .documentId("vrSectionJourney")
+      //   ),
 
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have

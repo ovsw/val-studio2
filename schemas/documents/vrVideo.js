@@ -66,6 +66,13 @@ export default {
       title: "Body",
       type: "bodyPortableText",
     },
+    {
+      name: "image",
+      title: "Video thumbnail",
+      type: "simpleImage",
+      description: "This is the image that appears on the video listing page.",
+      validation: (Rule) => Rule.error("Missing thumbnail image.").required(),
+    },
     // {
     //   name: "image",
     //   title: "Custom Header Image",
@@ -102,7 +109,7 @@ export default {
       slug: "slug",
     },
     prepare({ title = "No title", slug = {} }) {
-      const path = `/${slug.current}/`;
+      const path = `/video/<sub-section-slug>/${slug.current}/`;
       return {
         title,
         subtitle: path,

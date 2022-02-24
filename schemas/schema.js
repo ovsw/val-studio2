@@ -12,6 +12,7 @@ import page from "./documents/page";
 import redirects from "./documents/redirects";
 import siteSettings from "./documents/siteSettings";
 import vrSection from "./documents/vrSection";
+import vrSubSection from "./documents/vrSubsection";
 import vrVideo from "./documents/vrVideo";
 
 // Object types
@@ -24,7 +25,6 @@ import mainImage from "./objects/mainImage";
 import mytable from "./objects/mytable";
 import redirect from "./objects/redirect";
 import simpleImage from "./objects/simpleImage";
-import vrSubsection from "./objects/vrSubsection";
 import youtube from "./objects/youtube";
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -44,6 +44,8 @@ export default createSchema({
     redirects,
     siteSettings,
     vrSection,
+    vrSubSection,
+    vrVideo,
     // objects
     authorReference,
     bioPortableText,
@@ -54,8 +56,6 @@ export default createSchema({
     mytable,
     redirect,
     simpleImage,
-    vrSubsection,
-    vrVideo,
     youtube,
 
     // When added to this list, object types can be used as
