@@ -49,6 +49,13 @@ export default {
       type: "string",
     },
     {
+      name: "description",
+      title: "Description",
+      description:
+        "this description appears on video listings, along with the title and image",
+      type: "text",
+    },
+    {
       name: "slug",
       type: "slug",
       title: "Slug",
