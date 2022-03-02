@@ -63,6 +63,14 @@ export default {
       },
     },
     {
+      name: "description",
+      title: "Description",
+      description:
+        "this description appears on the section page sub-section listings, along with the title and image",
+      type: "text",
+      validation: (Rule) => Rule.error("Missing description").required(),
+    },
+    {
       name: "videoRefs",
       title: "Video Resources",
       icon: FaVideo,

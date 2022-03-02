@@ -54,6 +54,7 @@ export default {
       description:
         "this description appears on video listings, along with the title and image",
       type: "text",
+      validation: (Rule) => Rule.error("Missing description").required(),
     },
     {
       name: "slug",
