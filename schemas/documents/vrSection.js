@@ -57,6 +57,13 @@ export default {
       },
     },
     {
+      name: "body",
+      type: "bodyPortableText",
+      description:
+        "This field appeares before the listing of sub-categories. Used for a short intro about this category's content.",
+      title: "Body",
+    },
+    {
       name: "subSections",
       type: "array",
       title: "Sub-Sections",
