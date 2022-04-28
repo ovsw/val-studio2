@@ -102,79 +102,92 @@ export default () =>
                 .params({ type: "post", categoryId })
             )
         ),
+      S.divider(),
       S.listItem()
         .title("Pages")
-        .child(
-          S.list()
-            .title("Pages")
-            .items([
-              S.documentListItem()
-                .id("mystory")
-                .title("My Story")
-                .schemaType("page"),
-              S.documentListItem()
-                .id("vaHomeLoans")
-                .title("VA Home Loans")
-                .schemaType("page"),
-              S.listItem()
-                .title("VA Home Loans Sub-Pages")
-                .id("vaHomeLoansPages")
-                .child(
-                  S.documentList()
-                    .id("loanInfoPages")
-                    .title("Loan info Sub-Pages")
-                    .menuItems(S.documentTypeList("page").getMenuItems())
-                    .filter("_type == $type && references($parentId)")
-                    .params({ type: "page", parentId: "vaHomeLoans" })
-                    .defaultOrdering([
-                      { field: "_createdAt", direction: "asc" },
-                    ])
-                )
-                .icon(MdFolder),
-              S.documentListItem()
-                .id("apply")
-                .title("Apply")
-                .schemaType("page"),
-              S.documentListItem()
-                .id("media")
-                .title("Media")
-                .schemaType("page"),
-              S.documentListItem()
-                .id("loanInfo")
-                .title("Loan Information")
-                .schemaType("page"),
-              S.listItem()
-                .title("Loan Info Sub-Pages")
-                .child(
-                  S.documentList()
-                    .id("loanInfoPages")
-                    .title("Loan info Sub-Pages")
-                    .menuItems(S.documentTypeList("page").getMenuItems())
-                    .filter("_type == $type && references($parentId)")
-                    .params({ type: "page", parentId: "loanInfo" })
-                    .defaultOrdering([
-                      { field: "_createdAt", direction: "asc" },
-                    ])
-                )
-                .icon(MdFolder),
-              S.documentListItem()
-                .id("vacoe")
-                .title("VA COE")
-                .schemaType("page"),
-              S.documentListItem()
-                .id("contactMe")
-                .title("Contact")
-                .schemaType("page"),
-              S.documentListItem()
-                .id("vietnamVetsEvent")
-                .title("Annual Vietnam Vets Celebration")
-                .schemaType("page"),
-              S.documentListItem()
-                .id("spring2021BuyersGuide")
-                .title("Spring 2021 Buyer's Guide")
-                .schemaType("page"),
-            ])
-        ),
+        .schemaType("page")
+        .child(S.documentTypeList("page").title("Pages")),
+      S.listItem()
+        .title("Location pages")
+        .schemaType("pageLocation")
+        .child(S.documentTypeList("pageLocation").title("Location Pages")),
+      // S.listItem()
+      //   .title("Pages")
+      //   .child(
+      //     S.list()
+      //       .title("Pages")
+      //       .items([
+      //         S.documentListItem()
+      //           .id("mystory")
+      //           .title("My Story")
+      //           .schemaType("page"),
+      //         S.documentListItem()
+      //           .id("vaHomeLoans")
+      //           .title("VA Home Loans")
+      //           .schemaType("page"),
+      //         S.listItem()
+      //           .title("VA Home Loans Sub-Pages")
+      //           .id("vaHomeLoansPages")
+      //           .child(
+      //             S.documentList()
+      //               .id("loanInfoPages")
+      //               .title("Loan info Sub-Pages")
+      //               .menuItems(S.documentTypeList("page").getMenuItems())
+      //               .filter("_type == $type && references($parentId)")
+      //               .params({ type: "page", parentId: "vaHomeLoans" })
+      //               .defaultOrdering([
+      //                 { field: "_createdAt", direction: "asc" },
+      //               ])
+      //           )
+      //           .icon(MdFolder),
+      //         S.documentListItem()
+      //           .id("apply")
+      //           .title("Apply")
+      //           .schemaType("page"),
+      //         S.documentListItem()
+      //           .id("media")
+      //           .title("Media")
+      //           .schemaType("page"),
+      //         S.documentListItem()
+      //           .id("loanInfo")
+      //           .title("Loan Information")
+      //           .schemaType("page"),
+      //         S.listItem()
+      //           .title("Loan Info Sub-Pages")
+      //           .child(
+      //             S.documentList()
+      //               .id("loanInfoPages")
+      //               .title("Loan info Sub-Pages")
+      //               .menuItems(S.documentTypeList("page").getMenuItems())
+      //               .filter("_type == $type && references($parentId)")
+      //               .params({ type: "page", parentId: "loanInfo" })
+      //               .defaultOrdering([
+      //                 { field: "_createdAt", direction: "asc" },
+      //               ])
+      //           )
+      //           .icon(MdFolder),
+      //         S.documentListItem()
+      //           .id("vacoe")
+      //           .title("VA COE")
+      //           .schemaType("page"),
+      //         S.documentListItem()
+      //           .id("contactMe")
+      //           .title("Contact")
+      //           .schemaType("page"),
+      //         S.documentListItem()
+      //           .id("vietnamVetsEvent")
+      //           .title("Annual Vietnam Vets Celebration")
+      //           .schemaType("page"),
+      //         S.documentListItem()
+      //           .id("spring2021BuyersGuide")
+      //           .title("Spring 2021 Buyer's Guide")
+      //           .schemaType("page"),
+      //         S.documentListItem()
+      //           .id("vaLoans")
+      //           .title("VA Loans Parent Page")
+      //           .schemaType("page"),
+      //       ])
+      //   ),
       S.divider(),
       S.listItem()
         .title("Authors")

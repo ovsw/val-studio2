@@ -9,6 +9,7 @@ import author from "./documents/author";
 import category from "./documents/category";
 import post from "./documents/post";
 import page from "./documents/page";
+import pageLocation from "./documents/page-location";
 import redirects from "./documents/redirects";
 import siteSettings from "./documents/siteSettings";
 import vrSection from "./documents/vrSection";
@@ -40,6 +41,7 @@ export default createSchema({
     author,
     category,
     page,
+    pageLocation,
     post,
     redirects,
     siteSettings,
